@@ -1,0 +1,55 @@
+- What is full-stack web dev?
+* full stack means building everything that goes into a web application: frontend(website and UI) and backend(server, databases, APIs)
+* frontend: HTML(structure and content), css(styling), js(interactivity and logic)
+* backend: server for business logic, databases to store information, APIs to send/receive data
+- Introduction to HTML - how do we create a bare-bones website?
+* HTML is HyperText Markup Language, the skeleton of the internet.
+* common html tags (code with us, www.programiz.com/html/online-compiler)
+
+- css
+* ./ finds current dictionary, ../ finds parent dictionary
+* css size properties: dimensions(height, weight, max-height, etc.), spacing(margin, padding, border), positioning(top, left, etc.), units(px, 1 pixel, dependent on resolution of user's screen; vw/vh, 1% of window's width/height; em, 1x font-size of element; rem, 1x font-size of root element).
+* css box model: content, contains the content of the element such as text and images; padding, space around the content area and within the border box; border, surrounds the content and any padding; margin, outermost layer that controls the spacing between other elements.
+* css positioning: static, default original position; relative, relative to initial position; absolute, relative to nearest positioned ancestor; fixed, relative to window.
+* css flexbox: flex defines a flex container, enables a flex context for all its direct children, by default, flex items are laid out in the source order; 'flex-direction: column', default direction is a row left to right; 'justify-content: flex-start/flex-end/center/space-between/space-around/space-evenly'; for more, https://flexboxfroggy.com/
+* css grid: grid splits the layout into rows and columns; 'grid-template-columns/rows' to adjust sizes of rows and columns; for more, https://css-tricks.com/snippets/css/complete-guide-grid/
+* Media queries are extremely important to keep in mind! What looks good on your screen might not be good on another's. For more, @media
+
+- What is JS?
+* webpage file system = index.html + styles.css + scripts.js
+* client(user clicks trash icon next to an email to tell server to delete email from database) and server(check if it's been deleted successfully and if not, remove the email from the user's screen or display an error message) is handled by JS.
+* JS is a scripting language, interpreted by browsers, allows you to modify the DOM dynamically.
+- Where to put JS Code?
+Just like CSS, we want to put our JS in a separate file (.js); put the following tag at the bottom of the body of your HTML file (<script src="filename.js"></script>) (Why at the bottom? Your JS might rely on your HTML elements existing; if JS is at top, browser will run it before the rest of your HTML is rendered, causing errors.)
+- Running JS
+* all browsers are JavaScript interpreters (Inspect Element -> Console).
+* Declaring variables: let, const, var(don't use this!); let and const are both block scoped while let is reassignable vs. const is not.
+* Primitive types in JS: number, string""'', boolean, null, undefined(variables has been declared but not defined), everything else is an object(incl. arrays and functions). Here, objects are basically dictionaries/maps, they have a set of keys, which each correspond to a value; values can be anything - primitives, functions, lists, even other objects; keys can only be strings or symbols.
+* Functions:
+** (basic math operations:) general, +-*/, power, base ** exponent, modulo, dividend % divisor; ** (basic strings:) split, splits the string into an array of substrings using the delimiter;
+** includes, checks if string includes specific character(s);
+** toUpperCase & toLowerCase, converts the string to upper or lowercase;
+** slice, returns the specified part of the string (substring);
+** replace, returns the same string, but with the specified replacements;
+** indexOf, returns the index of the character(s) within the string and -1 if the character(s) don’t exist in the string;
+** charAt, returns the character of the string at a given index;
+** for more (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String).
+- What is the DOM?
+* Document Object Model, representation of the webpage elements (how the browser thinks about elements on the webpage), browsers generate DOM Tree from html (hierarchy between parent and children, hence a tree), can be manipulated by JS dynamically.
+* Inspecting the DOM: right click the element you are interested in and select 'Inspect'.
+* Interacting with the DOM - modifying DOM Elements: adding, removing and replacing elements in the DOM, here is the full MDN reference of the DOM API (https://developer.mozilla.org/en-US/docs/Web/API/Document).
+* DOM Element Properties:
+** .className, returns the class property of the element, <span class="someClass"></span>
+** .id, returns the id of the element, <span id="someId"></span>
+** .textContent, returns the text contained within the element, <span>"Element text"</span>
+** .style, returns the style property of the element, <span style="color: red"></span>
+** .value, returns the value of input elements, <input value={someValue}>
+
+- Node.js and Express
+* Frontend is the website/webapp that you see and interact with in your browser, some limitations are: storing data (persisting data between sessions), user authentication and authorization, running everything on the client (browser), etc.
+* Backend development - servers, i.e., making your own API: node.js is the server environment and allows the programmer to run JavaScript on a web server (node.js vs. browser: both powered by JavaScript, browser interacts with the document DOM and window, node.js is used to make web servers with a comprehensive API).
+* Modules are pieces of reusable code that you can include in your application without reinventing the wheel, require() over import.
+* NPM, Node Package Manager manage any dependencies (modules, libraries) within a project, lists all dependencies in a project in package.json and the actual code in a folder called node_modules, npm init, npm install.
+- How to actually make a server?
+* Middleware literally means anything you put in the middle of one layer of the software and another, think of node.js as the underlying mechanism to achieve web server functionality, and middleware can be mounted on top of the web server and abstracts away the complex low-level APIs inherent to node.js, anything that lives between the communication layer from your web client to the web server, access to the request object (req) and the response object (res).
+* Express is minimalistic middleware framework build atop node.js, APIs that abstract away node.js low-level functionality for http methods, makes it easy to create a robust API.

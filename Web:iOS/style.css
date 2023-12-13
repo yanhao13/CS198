@@ -1,0 +1,33 @@
+		p{
+			color: rgb(0, 0, 0);
+		}
+
+		.scary{
+			color: red;
+		}
+
+		#ocean{
+			background-color: blue;
+		}
+		.scary{
+			color: red;
+		}
+
+		#back{
+			background-color: blue;
+			color: white;
+		}
+		#back:hover{
+			background-color: green;
+		
+		}
+
+		#fence{
+			background-color: #FFA500;
+			border-style: solid;
+			border-color: blue;
+		}
+		.scary{
+			color: red;
+		}
+
