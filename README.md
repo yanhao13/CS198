@@ -1,2 +1,2 @@
 # CS198
-Berkeley COMSCI 198 Fullstack Web/iOS Development, UI/UX Design, DL.
+Berkeley COMPSCI 198 Fullstack Web Development, UI/UX Design, DL.
