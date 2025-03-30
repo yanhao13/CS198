@@ -1,2 +1,2 @@
 # CS198
-java script, Berkeley CS198 Web/iOS, DeepLearning, Blockchain, Linux 23fall
+Berkeley COMSCI 198 Fullstack Web/iOS Development, UI/UX Design, DL.
